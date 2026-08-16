@@ -1,5 +1,7 @@
 # authz-differ
 
+[![tests](https://github.com/kubakozub/authz-differ/actions/workflows/tests.yml/badge.svg)](https://github.com/kubakozub/authz-differ/actions/workflows/tests.yml)
+
 **Replay one HTTP request under multiple identities and diff the responses to catch broken access control (IDOR / BOLA / missing authentication).**
 
 `authz-differ` is a small, dependency-free assistant for **authorized** access-control testing. You hand it one request, two or more identities (your own sessions/tokens), and it sends that *single* request once per identity and diffs the results. If a different user — or nobody at all — gets back the owner's data, you have a finding.
