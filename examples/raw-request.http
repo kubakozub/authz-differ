@@ -1,0 +1,4 @@
+GET /api/v1/accounts/{{ID}} HTTP/1.1
+Host: api.example.com
+Accept: application/json
+

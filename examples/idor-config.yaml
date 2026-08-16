@@ -1,0 +1,28 @@
+# Example authz-differ job (YAML subset). Replace the session cookies with your
+# OWN test accounts on a target you are AUTHORIZED to test, then run:
+#   authz-differ run --config idor-config.yaml --i-am-authorized
+request:
+  method: GET
+  url: https://api.example.com/api/v1/accounts/{{ID}}
+  headers:
+    Accept: application/json
+identities:
+  # The owner establishes the baseline; its object id is the one under test.
+  - name: owner
+    role: owner
+    id: 1001
+    headers:
+      Cookie: session=REPLACE_WITH_OWNER_SESSION
+  # A different authenticated user. With no id of its own it inherits the
+  # owner's id (1001) — i.e. "can Bob read Alice's object?".
+  - name: attacker
+    role: other
+    headers:
+      Cookie: session=REPLACE_WITH_ANOTHER_USER_SESSION
+  # No credentials at all.
+  - name: unauthenticated
+    role: unauth
+settings:
+  delay: 1.0
+  similarity_threshold: 0.9
+  timeout: 20

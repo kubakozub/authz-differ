@@ -1,0 +1,7 @@
+[
+  { "name": "owner",           "role": "owner", "id": "1001",
+    "headers": { "Cookie": "session=REPLACE_WITH_OWNER_SESSION" } },
+  { "name": "attacker",        "role": "other",
+    "headers": { "Cookie": "session=REPLACE_WITH_ANOTHER_USER_SESSION" } },
+  { "name": "unauthenticated", "role": "unauth", "headers": {} }
+]
