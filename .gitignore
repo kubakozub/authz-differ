@@ -49,7 +49,7 @@ ENV/
 *~
 .DS_Store
 
-# Local scratch / real targets — never commit live jobs or captured output
+# Local scratch / real targets, never commit live jobs or captured output
 *.local.json
 *.local.yaml
 scratch/

@@ -13,7 +13,7 @@ test-account sessions on a target you are authorized to test**, then pass
 All three describe the same classic BOLA/IDOR test: an `owner` reads their own
 object, while a different authenticated user (`attacker`) and an
 `unauthenticated` client attempt the same request. Because `attacker` and
-`unauthenticated` declare no object `id`, they inherit the owner's (`1001`) — so
+`unauthenticated` declare no object `id`, they inherit the owner's (`1001`), so
 the tool is asking "can someone else reach the owner's object?".
 
 Generate fresh copies any time with:

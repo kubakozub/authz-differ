@@ -40,7 +40,7 @@ classifiers = [
 ]
 dependencies = []
 
-# This project depends only on the Python standard library — there are no
+# This project depends only on the Python standard library: there are no
 # runtime dependencies to install.
 
 [project.urls]

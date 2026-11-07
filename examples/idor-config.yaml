@@ -14,7 +14,7 @@ identities:
     headers:
       Cookie: session=REPLACE_WITH_OWNER_SESSION
   # A different authenticated user. With no id of its own it inherits the
-  # owner's id (1001) — i.e. "can Bob read Alice's object?".
+  # owner's id (1001), i.e. "can Bob read Alice's object?".
   - name: attacker
     role: other
     headers:
